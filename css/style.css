@@ -85,38 +85,22 @@ body {
    margin-left:auto;
 }
 .link{ 
-  display: flex;
-  color: var(--dark-secondari-color);}
-
-.link::before{
-  display:inline-flex;
-  content: "";
-  margin-right: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  align-items: center;
- 
-}
-.mail-box::before{
-  width:16px;
-  height: 16px;
-  background-image:url(../Images/envelope.svg) ;
-}
+ display: flex;
+ align-items: center;
+ color: var(--dark-secondari-color);
+ fill:var(--dark-secondari-color)}
   
 .mail-box{
   margin-right:30px;
- ;}
-.tel-box::before {
-  width:16px;
-  height: 16px;
-  background-image: url(../Images/smartphone.svg);
+}
+.icon{
+  margin-right:10px ;
 }
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color)
 }
-
 li {
   list-style: none;
 }
@@ -154,7 +138,6 @@ a {
 .button-hero{
   margin-left:auto ;
   margin-right: auto;
-  border: none;
   padding: 10px 32px;
 
   font-family:inherit;
@@ -166,6 +149,9 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   background: #2196f3;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--white-main-color);
 }
 .visualli-hidden {position:absolute;
@@ -206,9 +192,9 @@ h2 {
   border-radius: 4px;
 }
 .ikon-group::before{background-image:url(../Images/Group.svg);}
-.ikon-clock::before{background-image: url(../Images/clock\ 1.svg);}
-.ikon-diagram::before{background-image: url(../Images/diagram\ 1.svg);}
-.ikon-astro::before{background-image: url(../Images/astronaut\ 1.svg);}
+.ikon-clock::before{background-image: url(../Images/clock.svg);}
+.ikon-diagram::before{background-image: url(../Images/diagram.svg);}
+.ikon-astro::before{background-image: url(../Images/astronaut.svg);}
 
 .studio-list>.text-box:not(:last-child){
   margin-right:30px ;
@@ -234,7 +220,9 @@ h2 {
   padding: 0px;
   margin: 0;
 }
-img{ display: block;}
+img{ display: block;
+width:100% ;
+}
 
 .foto {
  padding:94px 0 ;
@@ -295,10 +283,11 @@ img{ display: block;}
   fill:#afb1b8
 }
 .social-net:hover,
-.social-net:focus{
-  background-color:var( --accent-color);
+.social-net:focus
+{ background-color:var( --accent-color);
   fill:var(--white-main-color)
 }
+
 .pin{
   display:flex;
   height:20px ;
@@ -345,7 +334,6 @@ img{ display: block;}
   margin: 0;
   margin-bottom: 50px;
   justify-content:center;
-  
 }
 .btn-list>.btn-set:not(:last-child){
   margin-right:8px ;
@@ -370,6 +358,10 @@ img{ display: block;}
 .btn-portfolio:focus {
   background: var(--accent-color);
   color: var(--white-main-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+   0px 1px 2px rgba(0, 0, 0, 0.08),
+   0px 2px 2px rgba(0, 0, 0, 0.12);
+  
   }
 
 .imag-list{
@@ -390,15 +382,14 @@ img{ display: block;}
 }
 
 .imag-set:hover,
-.imag-set:focus{
+.imag-set:focus-within
+{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06), 
   1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
  }
- .imag-set:focus{
-  outline: none;
- }
+
 .imag-list >.imag-set:nth-child(3n){
   margin-right:0 ;
 }
